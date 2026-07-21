@@ -1,0 +1,26 @@
+{
+  "name": "vuepressgleenley",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "vuepress dev docs NODE_ENV=development",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider vuepress build docs",
+    "deploy": "bash deploy.sh",
+    "update": "bash mkWeb.sh"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vuepress": "^1.9.9",
+    "vuepress-theme-vdoing": "^1.12.8"
+  },
+  "dependencies": {
+    "@vuepress/plugin-medium-zoom": "^1.9.9",
+    "vuepress-plugin-cursor-effects": "^1.1.6",
+    "vuepress-plugin-one-click-copy": "^1.0.6",
+    "vuepress-plugin-ribbon": "^1.1.6",
+    "vuepress-plugin-thirdparty-search": "^1.0.2"
+  }
+}
