@@ -12,7 +12,7 @@ module.exports = {
     host: '127.0.0.1',
     port: 8532,
     base,
-    title: `GleenLey's Blog`, // 显示在左上角的网页名称以及首页在浏览器标签显示的title名称
+    title: `Xiang's Blog`, // 显示在左上角的网页名称以及首页在浏览器标签显示的title名称
     description: '保持热爱 真理无限 一步一个脚印', // meta 中的描述文字，用于SEO
     // 注入到当前页面的 HTML <head> 中的标签
     head: [
@@ -72,7 +72,7 @@ module.exports = {
         blogger: {
             // avatar: '/learing_record/images/user.avif',
             avatar: `${base}images/user.avif`,
-            // name: `GleenLey's Blog`,
+            // name: `Xiang's Blog`,
             // slogan: '保持热爱 真理无限 一步一个脚印',
         },
         editLinks: true, // 启用编辑
@@ -124,7 +124,7 @@ module.exports = {
     },
     // 扩展自动生成frontmatter。（当md文件的frontmatter不存在相应的字段时将自动添加。不会覆盖已有的数据。）
     author: {
-        name: `GleenLey's Blog`,
+        name: `Xiang's Blog`,
         link: 'https://gitee.com/Gleenley'
     },
     plugins: [
