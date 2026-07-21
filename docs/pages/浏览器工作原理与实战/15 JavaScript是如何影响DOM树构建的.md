@@ -8,8 +8,8 @@ categories:
 tags: 
   - null
 author: 
-  name: GleenLey
-  link: https://gitee.com/Gleenley
+  name: Xiang
+  # link: https://gitee.com/lxlxlxlxxl
 ---
 1.  在渲染引擎内部，有一个叫 **HTML 解析器（HTMLParser)** 的模块，它的职责就是负责将 HTML 字节流转换为 DOM 结构。
 

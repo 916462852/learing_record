@@ -8,8 +8,8 @@ categories:
 tags: 
   - null
 author: 
-  name: GleenLey
-  link: https://gitee.com/Gleenley
+  name: Xiang
+  # link: https://gitee.com/lxlxlxlxxl
 ---
 web常见的攻击方式有哪些
 -------------------

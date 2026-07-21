@@ -8,8 +8,8 @@ categories:
 tags: 
   - css
 author: 
-  name: GleenLey
-  link: https://gitee.com/Gleenley
+  name: Xiang
+  # link: https://gitee.com/lxlxlxlxxl
 ---
 
 > CSS选择器是CSS规则的第一部分它是元素和其他部分组合起来告诉浏览器哪个HTML元素应当是被选为应用规则中的CSS属性值的方式选择器所选择的元素，叫做“选择器的对象”

@@ -1,7 +1,7 @@
 /*
- * @Author: Gleenley<https://gitee.com/Gleenley>
+ * @Author: xiang<https://gitee.com/lxlxlxlxxl>
  * @Date: 2023-4-18 15:27:18
- * @LastEditors: Gleenley<https://gitee.com/Gleenley>
+ * @LastEditors: xiang<https://gitee.com/lxlxlxlxxl>
  * @LastEditTime: 2023-05-20 11:36:50
  */
 
@@ -113,19 +113,19 @@ module.exports = {
         // 页脚信息
         footer: {
             // createYear: 2023, // 博客创建年份
-            copyrightInfo: 'present GleenLey', // 博客版权信息、备案信息等，支持a标签或换行标签</br>
+            copyrightInfo: 'present xiang', // 博客版权信息、备案信息等，支持a标签或换行标签</br>
         },
         extendFrontmatter: {
             author: {
-                name: 'GleenLey',
-                link: 'https://gitee.com/Gleenley'
+                name: 'xiang',
+                link: 'https://gitee.com/lxlxlxlxxl'
             }
         },
     },
     // 扩展自动生成frontmatter。（当md文件的frontmatter不存在相应的字段时将自动添加。不会覆盖已有的数据。）
     author: {
         name: `Xiang's Blog`,
-        link: 'https://gitee.com/Gleenley'
+        link: 'https://gitee.com/lxlxlxlxxl'
     },
     plugins: [
         [

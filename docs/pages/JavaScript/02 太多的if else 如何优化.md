@@ -8,8 +8,8 @@ categories:
 tags:
   - javaScript
 author: 
-  name: GleenLey
-  link: https://gitee.com/Gleenley
+  name: Xiang
+  # link: https://gitee.com/lxlxlxlxxl
 ---
 
 > 假如有这样一段代码，功能是根据 status 字段来转换成文字，当然有人会说使用字典来实现相同的效果，这当然是一个不错的解决方法。但是这里只是来讨论如何在其他地方类型的情形，应该如何优化。

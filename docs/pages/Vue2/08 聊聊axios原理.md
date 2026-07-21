@@ -8,8 +8,8 @@ categories:
 tags: 
   - axios
 author: 
-  name: GleenLey
-  link: https://gitee.com/Gleenley
+  name: Xiang
+  # link: https://gitee.com/lxlxlxlxxl
 ---
 > 感兴趣的朋友可能已经看过axios的源码 那接下来我们一起看看axios的源码
 <!-- more -->

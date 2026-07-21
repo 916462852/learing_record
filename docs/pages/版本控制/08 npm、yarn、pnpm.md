@@ -8,8 +8,8 @@ categories:
 tags:
   - 版本控制
 author: 
-  name: GleenLey
-  link: https://gitee.com/Gleenley
+  name: Xiang
+  # link: https://gitee.com/lxlxlxlxxl
 ---
 
 # 浅谈npm yarn pnpm的区别

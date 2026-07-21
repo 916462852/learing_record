@@ -8,8 +8,8 @@ categories:
 tags: 
   - webpack
 author: 
-  name: GleenLey
-  link: https://gitee.com/Gleenley
+  name: Xiang
+  # link: https://gitee.com/lxlxlxlxxl
 ---
 
 ## 一、loader是什么

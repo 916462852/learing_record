@@ -10,8 +10,8 @@ categories:
 tags:
   - 版本控制
 author: 
-  name: GleenLey
-  link: https://gitee.com/Gleenley
+  name: Xiang
+  # link: https://gitee.com/lxlxlxlxxl
 ---
 
 <!-- ::: note 序言
@@ -20,7 +20,7 @@ author:
 
 ::: right
 
-2021-11-13 @GleenLey
+2021-11-13 @xiang
 
 ::: -->
 

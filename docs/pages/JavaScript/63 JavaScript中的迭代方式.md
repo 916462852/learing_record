@@ -8,8 +8,8 @@ categories:
 tags:
   - javaScript
 author: 
-  name: GleenLey
-  link: https://gitee.com/Gleenley
+  name: Xiang
+  # link: https://gitee.com/lxlxlxlxxl
 ---
 > for...in、for...of和for await...of是JavaScript中三种不同的迭代方式，我们也经常会用到，但你真的了解它们吗？并知道怎么选择它们吗？
 
@@ -51,7 +51,7 @@ writable: true
 
 ```js
 const obj = {
-  name: "Gleenley",
+  name: "xiang",
   age: 10,
   hello() {
     console.log("hello");

@@ -8,8 +8,8 @@ categories:
 tags: 
   - null
 author: 
-  name: GleenLey
-  link: https://gitee.com/Gleenley
+  name: Xiang
+  # link: https://gitee.com/lxlxlxlxxl
 ---
 1.  当渲染进程接收 HTML 文件字节流时，会先开启一个预解析线程
 2.  如果遇到 JavaScript 文件或者 CSS 文件，那么预解析线程会提前下载这些数据。

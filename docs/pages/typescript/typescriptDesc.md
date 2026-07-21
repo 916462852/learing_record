@@ -8,8 +8,8 @@ categories:
 tags: 
   - typescript
 author: 
-  name: GleenLey
-  link: https://gitee.com/Gleenley
+  name: Xiang
+  # link: https://gitee.com/lxlxlxlxxl
 ---
 
 ## 一、是什么

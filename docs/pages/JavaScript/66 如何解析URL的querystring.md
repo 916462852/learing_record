@@ -8,8 +8,8 @@ categories:
 tags:
   - javaScript
 author: 
-  name: GleenLey
-  link: https://gitee.com/Gleenley
+  name: Xiang
+  # link: https://gitee.com/lxlxlxlxxl
 ---
 
 > 关于路由中解析 querystring，无论前端开发还是后端开发都无时无刻在使用这项功能

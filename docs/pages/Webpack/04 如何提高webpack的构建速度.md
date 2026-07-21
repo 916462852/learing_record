@@ -8,8 +8,8 @@ categories:
 tags: 
   - webpack
 author: 
-  name: GleenLey
-  link: https://gitee.com/Gleenley
+  name: Xiang
+  # link: https://gitee.com/lxlxlxlxxl
 ---
 
 > 随着我们的项目涉及到页面越来越多，功能和业务代码也会随着越多，相应的 ```webpack``` 的构建时间也会越来越久构建时间与我们日常开发效率密切相关，当我们本地开发启动 ```devServer``` 或者 ```build``` 的时候，如果时间过长，会大大降低我们的工作效率所以，优化```webpack```构建速度是十分重要的环节

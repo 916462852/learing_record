@@ -8,8 +8,8 @@ categories:
 tags: 
   - webpack
 author: 
-  name: GleenLey
-  link: https://gitee.com/Gleenley
+  name: Xiang
+  # link: https://gitee.com/lxlxlxlxxl
 ---
 
 > 随着前端的项目逐渐扩大，必然会带来的一个问题就是性能尤其在大型复杂的项目中，前端业务可能因为一个小小的数据依赖，导致整个页面卡顿甚至奔溃一般项目在完成后，会通过```webpack```进行打包，利用```webpack```对前端项目性能优化是一个十分重要的环节

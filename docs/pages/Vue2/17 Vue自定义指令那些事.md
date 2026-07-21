@@ -8,8 +8,8 @@ categories:
 tags: 
   - vue2
 author: 
-  name: GleenLey
-  link: https://gitee.com/Gleenley
+  name: Xiang
+  # link: https://gitee.com/lxlxlxlxxl
 ---
 一、什么是指令
 ------------

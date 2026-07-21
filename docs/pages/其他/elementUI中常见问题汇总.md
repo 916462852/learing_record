@@ -9,8 +9,8 @@ categories:
 tags:
   - Elemetn UI
 author: 
-  name: GleenLey
-  link: https://gitee.com/Gleenley
+  name: Xiang
+  # link: https://gitee.com/lxlxlxlxxl
 ---
 > 记录日常开发中遇到的若干问题及其解决办法
 

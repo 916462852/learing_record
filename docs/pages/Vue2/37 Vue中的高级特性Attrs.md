@@ -8,8 +8,8 @@ categories:
 tags:
   - vue2
 author: 
-  name: GleenLey
-  link: https://gitee.com/Gleenley
+  name: Xiang
+  # link: https://gitee.com/lxlxlxlxxl
 ---
 
 
@@ -43,7 +43,7 @@ export default {
     },
     data() {
         return {
-            name: 'GleenLey',
+            name: 'xiang',
             age: 12,
             sex: 'male'
         }
@@ -77,8 +77,8 @@ export default {
     mounted() {
       console.log(this.$attrs);
       console.log(this.$attrs.name);
-      // Proxy(Object) {names: 'GleenLey', age: 12, sex: 'male', __vInternal: 1}[[Handler]]: Object[[Target]]: Object[[IsRevoked]]: 
-     //  GleenLey
+      // Proxy(Object) {names: 'xiang', age: 12, sex: 'male', __vInternal: 1}[[Handler]]: Object[[Target]]: Object[[IsRevoked]]: 
+     //  xiang
     }
 }
 </script>
