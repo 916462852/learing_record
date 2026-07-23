@@ -42,7 +42,7 @@ const fs = require('fs');
 
 ### 权限位 mode
 
-![lerna](/learing_record/images/fsmode01.avif)
+![lerna](/images/fsmode01.avif)
 
 
 针对文件所有者、文件所属组、其他用户进行权限分配，其中类型又分成读、写和执行，具备权限位4、2、1，不具备权限为0

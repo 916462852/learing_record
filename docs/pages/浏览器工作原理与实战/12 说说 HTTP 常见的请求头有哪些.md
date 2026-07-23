@@ -86,7 +86,7 @@ Cache-Control: max-age=0
 
 强制缓存与协商缓存的流程图如下所示：
 
- ![lerna](/learing_record/images/header01.avif)
+ ![lerna](/images/header01.avif)
 
 
 

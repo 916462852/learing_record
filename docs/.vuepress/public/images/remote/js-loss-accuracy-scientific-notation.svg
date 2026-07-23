@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="260" viewBox="0 0 920 260" role="img" aria-labelledby="title desc">
+  <title id="title">Binary scientific notation</title>
+  <desc id="desc">A binary floating point number represented as plus or minus 1 dot fraction multiplied by 2 to the exponent.</desc>
+  <rect width="920" height="260" rx="18" fill="#f7fbff"/>
+  <rect x="36" y="34" width="848" height="192" rx="14" fill="#ffffff" stroke="#b8d7ee" stroke-width="2"/>
+  <text x="460" y="105" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="46" fill="#16324f">
+    binary = 1.a<tspan baseline-shift="sub" font-size="27">1</tspan>a<tspan baseline-shift="sub" font-size="27">2</tspan>...a<tspan baseline-shift="sub" font-size="27">n</tspan> x 2<tspan baseline-shift="super" font-size="28">e</tspan>
+  </text>
+  <g font-family="Arial, sans-serif" font-size="22" fill="#496a83">
+    <text x="143" y="173">a<tspan baseline-shift="sub" font-size="14">i</tspan> is 0 or 1</text>
+    <text x="576" y="173">e is the decimal-point offset</text>
+  </g>
+  <path d="M284 151 C315 128, 352 128, 383 151" fill="none" stroke="#4aa3df" stroke-width="3"/>
+  <path d="M632 151 C662 128, 700 128, 730 151" fill="none" stroke="#4aa3df" stroke-width="3"/>
+</svg>

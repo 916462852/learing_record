@@ -17,7 +17,7 @@ git是什么
 
 <!-- more -->
 
-![designPatterns](/learing_record/images/git01.webp)
+![designPatterns](/images/git01.webp)
 
 项目开始，只有一个原始版仓库，别的机器可以```clone```这个原始版本库，那么所有```clone```的机器，它们的版本库其实都是一样的，并没有主次之分
 
@@ -49,7 +49,7 @@ git是什么
 + 本地仓库：提交更新，找到暂存区域的文件，将快照永久性存储到 ```Git``` 本地仓库
 + 远程仓库：远程的仓库，如 ```github```
 
-![designPatterns](/learing_record/images/git02.webp)
+![designPatterns](/images/git02.webp)
 
 命令
 ---

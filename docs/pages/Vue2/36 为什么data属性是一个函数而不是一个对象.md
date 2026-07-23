@@ -51,7 +51,7 @@ Vue.component('component1',{
 则会得到警告信息
 
 
-![lerna](/learing_record/images/vuedata01.avif)
+![lerna](/images/vuedata01.avif)
 
 
 

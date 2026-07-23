@@ -19,7 +19,7 @@ author:
 ### 初识sessionStorage 
  
 
-![session.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/47e946f6d22d4de8a906d6fa42762cde~tplv-k3u1fbpfcp-watermark.image?)
+![session.png](/images/remote/04-localstorage-01-session.png)
 
 从上图我们可以看到在application中有**sessionStorage** ,Key和Value存储了若干数据,那么我们如何去使用呢？
 
@@ -34,10 +34,10 @@ sessionStorage.setItem('tg',person)
 sessionStorage.getItem('tg')  // '[object Object]'
 ```
 
-![1.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1970b7be351a4638b9574dc2e363c0d1~tplv-k3u1fbpfcp-watermark.image?)
+![1.png](/images/remote/04-localstorage-02-1.png)
 
 
-![2.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d1768b4e0dda4945a60efed43a49595d~tplv-k3u1fbpfcp-watermark.image?)
+![2.png](/images/remote/04-localstorage-03-2.png)
 
 可能会有小伙伴会有疑问,为什么我们存储的明明是一个对象,到了SessionStorage中tg对应的Value是[object Object]呢? 当然,这不是我们预期想要的效果, 那么我们如何处理成我们想要的数据呢？
 ```
@@ -45,7 +45,7 @@ sessionStorage.setItem('tg',JSON.stringify(person))
 ```
 
 
-![3.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7e83affd3a624f43855bdddfad0f8942~tplv-k3u1fbpfcp-watermark.image?)
+![3.png](/images/remote/04-localstorage-04-3.png)
 显然,现在已经达到预期,那么我们尝试取出数据看看
 
 ```
@@ -57,7 +57,7 @@ Object.prototype.toString.call(result)
 ```
 
 
-![4.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b2fe34af8a6a452a8b82efb402741815~tplv-k3u1fbpfcp-watermark.image?)
+![4.png](/images/remote/04-localstorage-05-4.png)
 
 我们取出的数据是string类型, 当然这也不是我们想要的预期效果, 那么如何处理呢？
 
@@ -78,7 +78,7 @@ Object.prototype.toString.call(changeResult)
 [在线测试](http://dev-test.nemikor.com/web-storage/support-test/)
 
 
-![5.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3b9ea44bdf004ea08ab3b7e55030bed5~tplv-k3u1fbpfcp-watermark.image?)
+![5.png](/images/remote/04-localstorage-06-5.png)
  通过上图所示,我们可以得到 **localStorage**和**sessionStorage**的存储空间均为5101k, 约等于4.98M
  
  #### 失效时间
@@ -89,7 +89,7 @@ Object.prototype.toString.call(changeResult)
  localStorage.setItem('tg',' = =')
  ```
  
-![6.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/90ba64a0c00f45828834d6b01fbc561c~tplv-k3u1fbpfcp-watermark.image?)
+![6.png](/images/remote/04-localstorage-07-6.png)
 
 当我们需要移除的时候,不过需要注意的是,我们在使用 **localStorage**的时候,移除、存储方式和取出方式与**sessionStorage**是保持一致的
 
@@ -97,7 +97,7 @@ Object.prototype.toString.call(changeResult)
 localStorage.removeItem('tg')
 ```
 
-![7.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/063c0e27cfbe4d7eb8088d798960531a~tplv-k3u1fbpfcp-watermark.image?)
+![7.png](/images/remote/04-localstorage-08-7.png)
 
 
 #### 使用场景

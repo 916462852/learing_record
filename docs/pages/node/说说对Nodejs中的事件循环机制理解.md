@@ -19,7 +19,7 @@ author:
 
    <!-- more -->
    
- ![lerna](/learing_record/images/eventloop03.avif)
+ ![lerna](/images/eventloop03.avif)
 
 上图`EVENT_QUEUE` 给人看起来只有一个队列，但`EventLoop`存在6个阶段，每个阶段都有对应的一个先进先出的回调队列
 
@@ -28,7 +28,7 @@ author:
 
 上节讲到事件循环分成了六个阶段，对应如下：
 
- ![lerna](/learing_record/images/eventloop04.avif)
+ ![lerna](/images/eventloop04.avif)
 
 - timers阶段：这个阶段执行timer（setTimeout、setInterval）的回调
 - 定时器检测阶段(timers)：本阶段执行 timer 的回调，即 setTimeout、setInterval 里面的回调函数
@@ -44,7 +44,7 @@ author:
 
 流程图如下所示：
 
- ![lerna](/learing_record/images/eventloop05.avif)
+ ![lerna](/images/eventloop05.avif)
 
 在`Node`中，同样存在宏任务和微任务，与浏览器中的事件循环相似
 

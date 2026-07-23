@@ -45,7 +45,7 @@ author:
 
 而计算机只能用二进制（0或1）表示，二进制转换为科学记数法的公式如下：
 
- ![](https://static.vue-js.com/1b4b1620-86f4-11eb-ab90-d9ae814b240d.avif)
+ ![](/images/remote/js-loss-accuracy-scientific-notation.svg)
 
 其中，`a`的值为0或者1，e为小数点移动的位置
 
@@ -175,4 +175,3 @@ function add(num1, num2) {
 ```
 
 最后还可以使用第三方库，如`Math.js`、`BigDecimal.js`
-

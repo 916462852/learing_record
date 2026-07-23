@@ -21,11 +21,11 @@ author:
 
 我们可以把网页解刨成：背景层、内容层、悬浮层
 
-![lerna](/learing_record/images/scroll01.avif)
+![lerna](/images/scroll01.avif)
 
 当滚动鼠标滑轮的时候，各个图层以不同的速度移动，形成视觉差的效果
 
-![lerna](/learing_record/images/scroll02.avif)
+![lerna](/images/scroll02.avif)
 
 
 ## 二、实现方式
@@ -122,7 +122,7 @@ div {
 
 `3D`视角示意图如下所示：
 
-![lerna](/learing_record/images/scroll03.avif)
+![lerna](/images/scroll03.avif)
 
 
 举个例子：

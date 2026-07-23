@@ -48,7 +48,7 @@ export default {
 
 Vue.js 肯定不会以如此低效的方法来处理。Vue.js在默认情况下，每次触发某个数据的 setter 方法后，对应的 Watcher 对象其实会被 push 进一个队列 queue 中，在下一个 tick 的时候将这个队列 queue 全部拿出来 run（ Watcher 对象的一个方法，用来触发 patch 操作） 一遍。
 
-![lerna](/learing_record/images/vue2.21.webp)
+![lerna](/images/vue2.21.webp)
 
 
 那么什么是下一个 tick 呢？

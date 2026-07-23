@@ -139,20 +139,47 @@ export function genElement (el: ASTElement, state: CodegenState): string {
 
 在进行`if`判断的时候，`v-for`是比`v-if`先进行判断
 
-最终结论：`v-for`优先级比`v-if`高
+最终结论：在 `Vue2` 中，`v-for` 优先级比 `v-if` 高
+
+### Vue3 中的变化
+
+到了 `Vue3`，两者的优先级发生了变化：`v-if` 的优先级比 `v-for` 更高。
+
+也就是说，在同一个元素上同时写这两个指令时，`Vue3` 会先执行 `v-if`，再处理 `v-for`。
+
+例如下面这种写法：
+
+```html
+<li v-for="item in items" v-if="item.isShow" :key="item.id">
+    {{ item.title }}
+</li>
+```
+
+在 `Vue2` 中，理解方式更接近“先遍历，再判断”；
+
+但在 `Vue3` 中，`v-if` 会先执行，这时候 `item` 还没有被 `v-for` 创建出来，因此这种写法会有作用域访问问题。
+
+所以这个问题的最终结论应该分开记：
+
+1. `Vue2` 中：`v-for` 优先级高于 `v-if`
+2. `Vue3` 中：`v-if` 优先级高于 `v-for`
 
 ## 三、注意事项
 
-1. 永远不要把 `v-if` 和 `v-for` 同时用在同一个元素上，带来性能方面的浪费（每次渲染都会先循环再进行条件判断）
-2. 如果避免出现这种情况，则在外层嵌套`template`（页面渲染不生成`dom`节点），在这一层进行v-if判断，然后在内部进行v-for循环
+1. 永远不要把 `v-if` 和 `v-for` 同时用在同一个元素上
+2. 在 `Vue2` 中，这样写会带来性能浪费，因为每次渲染都会先循环，再逐项进行条件判断
+3. 在 `Vue3` 中，这样写还可能导致 `v-if` 访问不到 `v-for` 中定义的变量
+4. 如果是控制整个列表是否显示，推荐在外层嵌套 `template`，先做 `v-if` 判断，再在内部进行 `v-for` 循环
 
 ```js
 <template v-if="isShow">
-    <p v-for="item in items">
+    <p v-for="item in items" :key="item.id">
+        {{ item.title }}
+    </p>
 </template>
 ```
 
-3. 如果条件出现在循环内部，可通过计算属性`computed`提前过滤掉那些不需要显示的项
+5. 如果条件出现在循环内部，推荐通过计算属性 `computed` 先过滤出需要显示的数据，再进行循环
 
 ```js
 computed: {

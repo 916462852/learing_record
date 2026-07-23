@@ -21,7 +21,7 @@ author:
 
 <!-- more -->
 
- ![lerna](/learing_record/images/http01.avif)
+ ![lerna](/images/http01.avif)
 
 在计算机和网络世界有，存在不同的协议，如广播协议、寻址协议、路由协议等等......
 
@@ -52,11 +52,11 @@ author:
 
 `SSL` 协议位于` TCP/IP` 协议与各种应用层协议之间，浏览器和服务器在使用 `SSL` 建立连接时需要选择一组恰当的加密算法来实现安全通信，为数据通讯提供安全支持
 
- ![lerna](/learing_record/images/http02.avif)
+ ![lerna](/images/http02.avif)
 
 流程图如下所示：
 
- ![lerna](/learing_record/images/http03.avif)
+ ![lerna](/images/http03.avif)
 
 - 首先客户端通过URL访问服务器建立SSL连接
 - 服务端收到客户端请求后，会将网站支持的证书信息（证书中包含公钥）传送一份给客户端

@@ -91,17 +91,17 @@ webpack是什么
 
 当 ```webpack ```处理应用程序时，它会在内部构建一个依赖图，此依赖图对应映射到项目所需的每个模块（不再局限```js```文件），并生成一个或多个 ```bundle```
 
-![lerna](/learing_record/images/webpack01.webp)
+![lerna](/images/webpack01.webp)
 
 
 **```webpack```的能力：**
 
-![lerna](/learing_record/images/webpack02.webp)
+![lerna](/images/webpack02.webp)
 
 **模块整合能力**，提高性能，可维护性，解决浏览器频繁请求文件的问题
 
-![lerna](/learing_record/images/webpack03.webp)
+![lerna](/images/webpack03.webp)
 
 **万物皆可模块能力**，项目维护性增强，支持不同种类的前端模块类型，统一的模块化方案，所有资源文件的加载都可以通过代码控制
 
-![lerna](/learing_record/images/webpack04.webp)
+![lerna](/images/webpack04.webp)

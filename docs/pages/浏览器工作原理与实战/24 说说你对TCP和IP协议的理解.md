@@ -44,7 +44,7 @@ TCP/IP协议族按层次分别了五层体系或者四层体系
 如下图所示：
 
  
-![lerna](/learing_record/images/tcp01.avif)
+![lerna](/images/tcp01.avif)
 
 
 
@@ -123,7 +123,7 @@ OSI 参考模型与 TCP/IP 参考模型区别如下：
 三种模型对应关系如下图所示：
 
 
-![lerna](/learing_record/images/tcp02.avif)
+![lerna](/images/tcp02.avif)
 
 
 

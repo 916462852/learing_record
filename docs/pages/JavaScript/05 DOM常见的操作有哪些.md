@@ -166,7 +166,7 @@ document.all[''];  获取页面中的所有元素节点的对象集合型
 |nextSibling|返回当前节点之后相邻的同级节点|
 |previousSibling|返回当前节点之前相邻的同级节点|
 
-![lerna](/learing_record/images/dom01.avif)
+![lerna](/images/dom01.avif)
 
 ### 更新节点
 

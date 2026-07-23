@@ -23,7 +23,7 @@ author:
 Ajax的原理简单来说通过XmlHttpRequest对象来向服务器发异步请求，从服务器获得数据，然后用JavaScript来操作DOM而更新页面
 
 流程图如下：
-![lerna](/learing_record/images/ajax01.avif)
+![lerna](/images/ajax01.avif)
 
 下面举个例子：
 

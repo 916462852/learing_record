@@ -27,7 +27,7 @@ author:
 
 对于持续运行的服务进程，必须及时释放不再用到的内存。否则，内存占用越来越高，轻则影响系统性能，重则导致进程崩溃
 
-![lerna](/learing_record/images/memory01.avif)
+![lerna](/images/memory01.avif)
 
 在`C`语言中，因为是手动管理内存，内存泄露是经常出现的事情。
 

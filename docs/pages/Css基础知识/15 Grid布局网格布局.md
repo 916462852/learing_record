@@ -36,7 +36,7 @@ author:
 
 网格线，即划分网格的线，如下图所示：
 
-  ![lerna](/learing_record/images/grid01.avif)
+  ![lerna](/images/grid01.avif)
 
 上图是一个 2 x 3 的网格，共有3根水平网格线和4根垂直网格线
 ## 二、属性
@@ -150,11 +150,11 @@ author:
 ### grid-auto-flow 属性
 划分网格以后，容器的子元素会按照顺序，自动放置在每一个网格。
 顺序就是由`grid-auto-flow`决定，默认为行，代表"先行后列"，即先填满第一行，再开始放入第二行
- ![lerna](/learing_record/images/grid02.avif)
+ ![lerna](/images/grid02.avif)
 
 当修改成`column`后，放置变为如下：
 
-![lerna](/learing_record/images/grid03.avif)
+![lerna](/images/grid03.avif)
 ### justify-items 属性， align-items 属性， place-items 属性
 `justify-items` 属性设置单元格内容的水平位置（左中右），`align-items` 属性设置单元格的垂直位置（上中下）
 两者属性的值完成相同
@@ -193,7 +193,7 @@ author:
 - end - 对齐容器的结束边框
 - center - 容器内部居中
 
-![lerna](/learing_record/images/grid04.avif)
+![lerna](/images/grid04.avif)
 
 - space-around - 每个项目两侧的间隔相等。所以，项目之间的间隔比项目与容器边框的间隔大一倍
 
@@ -203,7 +203,7 @@ author:
 
 - stretch - 项目大小没有指定时，拉伸占据整个网格容器
 
-![lerna](/learing_record/images/grid05.avif)
+![lerna](/images/grid05.avif)
 
 
 
@@ -255,7 +255,7 @@ author:
 
 通过设置`grid-column`属性，指定1号项目的左边框是第二根垂直网格线，右边框是第四根垂直网格线
 
-![lerna](/learing_record/images/grid06.avif)
+![lerna](/images/grid06.avif)
 
 
 
@@ -305,7 +305,7 @@ author:
 
 关于兼容性问题，结果如下：
 
-![lerna](/learing_record/images/grid07.avif)
+![lerna](/images/grid07.avif)
 
 总体兼容性还不错，但在 IE 10 以下不支持
 

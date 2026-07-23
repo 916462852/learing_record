@@ -50,7 +50,7 @@ console.log( doSomething.prototype );
 
 可以看到，原型对象有一个自有属性constructor，这个属性指向该函数，如下图关系展示
 
-![lerna](/learing_record/images/prototype03.avif)
+![lerna](/images/prototype03.avif)
 
 
 
@@ -74,7 +74,7 @@ function Person(name) {
 var person = new Person('person')
 ```
 根据代码，我们可以得到下图
-![lerna](/learing_record/images/prototype02.avif)
+![lerna](/images/prototype02.avif)
 
 
 
@@ -96,7 +96,7 @@ var person = new Person('person')
 
 `__proto__`作为不同对象之间的桥梁，用来指向创建它的构造函数的原型对象的
 
-![lerna](/learing_record/images/prototype01.avif)
+![lerna](/images/prototype01.avif)
 
 每个对象的`__proto__`都是指向它的构造函数的原型对象`prototype`的
 

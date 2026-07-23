@@ -16,7 +16,7 @@ javaScript中工具方法
 
 ##### 树形结构
 
- ![lerna](/learing_record/images/dataType.avif)
+ ![lerna](/images/dataType.avif)
 
 
 ```js

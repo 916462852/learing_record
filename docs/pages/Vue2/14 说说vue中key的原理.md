@@ -79,7 +79,7 @@ Key是什么
 ```
 
 在不使用```key```的情况，```vue```会进行这样的操作：
-![lerna](/learing_record/images/vuekey01.webp)
+![lerna](/images/vuekey01.webp)
 
 分析下整体流程：
 

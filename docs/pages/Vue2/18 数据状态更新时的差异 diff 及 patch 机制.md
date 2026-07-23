@@ -117,7 +117,7 @@ function removeVnodes (parentElm, vnodes, startIdx, endIdx) {
 
 diff 算法是通过同层的树节点进行比较而非对树进行逐层搜索遍历的方式，所以时间复杂度只有 O(n)，是一种相当高效的算法，如下图。
 
-![lerna](/learing_record/images/vue2.13.webp)
+![lerna](/images/vue2.13.webp)
 
 这张图中的相同颜色的方块中的节点会进行比对，比对得到「差异」后将这些「差异」更新到视图上。因为只进行同层级的比对，所以十分高效。
 
@@ -334,14 +334,14 @@ function updateChildren (parentElm, oldCh, newCh) {
 
 首先我们定义 oldStartIdx、newStartIdx、oldEndIdx 以及 newEndIdx 分别是新老两个 VNode 的两边的索引，同时 oldStartVnode、newStartVnode、oldEndVnode 以及 newEndVnode 分别指向这几个索引对应的 VNode 节点。
 
-![lerna](/learing_record/images/vue2.14.webp)
+![lerna](/images/vue2.14.webp)
 
 接下来是一个 while 循环，在这过程中，oldStartIdx、newStartIdx、oldEndIdx 以及 newEndIdx 会逐渐向中间靠拢。
 ```
 while (oldStartIdx <= oldEndIdx && newStartIdx <= newEndIdx) 
 ```
 
-![lerna](/learing_record/images/vue2.15.webp)
+![lerna](/images/vue2.15.webp)
 
 
 
@@ -392,7 +392,7 @@ if (!oldStartVnode) {
 同理，oldEndVnode 与 newStartVnode 符合 sameVnode 时，也就是老 VNode 节点的尾部与新 VNode 节点的头部是同一节点的时候，将 oldEndVnode.elm 插入到 oldStartVnode.elm 前面。同样的，oldEndIdx 向前移动一位，newStartIdx 向后移动一位。
 
 
-![lerna](/learing_record/images/vue2.16.webp)
+![lerna](/images/vue2.16.webp)
 
 最后是当以上情况都不符合的时候，这种情况怎么处理呢？
 ```js
@@ -455,7 +455,7 @@ if (!idxInOld) {
 否则如果找到了节点，同时它符合 sameVnode，则将这两个节点进行 patchVnode，将该位置的老节点赋值 undefined（之后如果还有新节点与该节点key相同可以检测出来提示已有重复的 key ），同时将 newStartVnode.elm 插入到 oldStartVnode.elm 的前面。同理，newStartIdx 往后移动一位。
 
 
-![lerna](/learing_record/images/vue2.17.webp)
+![lerna](/images/vue2.17.webp)
 
 ```js
 else {
@@ -470,7 +470,7 @@ else {
 ```
 如果不符合 sameVnode，只能创建一个新节点插入到 parentElm 的子节点中，newStartIdx 往后移动一位。
 
-![lerna](/learing_record/images/vue2.18.webp)
+![lerna](/images/vue2.18.webp)
 ```js
 else {
     createElm(newStartVnode, parentElm);
@@ -479,11 +479,11 @@ else {
 ```
 最后一步就很容易啦，当 while 循环结束以后，如果 oldStartIdx > oldEndIdx，说明老节点比对完了，但是新节点还有多的，需要将新节点插入到真实 DOM 中去，调用 addVnodes 将这些节点插入即可。
 
-![lerna](/learing_record/images/vue2.19.webp)
+![lerna](/images/vue2.19.webp)
 
 同理，如果满足 newStartIdx > newEndIdx 条件，说明新节点比对完了，老节点还有多，将这些无用的老节点通过 removeVnodes 批量删除即可。
 
-![lerna](/learing_record/images/vue2.20.webp)
+![lerna](/images/vue2.20.webp)
 ```js
 if (oldStartIdx > oldEndIdx) {
     refElm = (newCh[newEndIdx + 1]) ? newCh[newEndIdx + 1].elm : null;

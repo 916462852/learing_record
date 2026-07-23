@@ -181,4 +181,4 @@ module.exports = {
 
 打包生成``` sourceMap``` 的时候，如果信息越详细，打包速度就会越慢。对应属性取值如下所示
 
-![lerna](/learing_record/images/webpack05.webp)
+![lerna](/images/webpack05.webp)

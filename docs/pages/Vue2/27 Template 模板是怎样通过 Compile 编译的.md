@@ -132,7 +132,7 @@ function advance (n) {
 ```
 举个例子，当我们把第一个 div 的头标签全部匹配完毕以后，我们需要将这部分除去，也就是向右移动 43 个字符。
 
-![lerna](/learing_record/images/vue2.10.webp)
+![lerna](/images/vue2.10.webp)
 
 调用 advance 函数
 ```
@@ -140,7 +140,7 @@ advance(43);
 ```
 得到结果
 
-![lerna](/learing_record/images/vue2.11.webp)
+![lerna](/images/vue2.11.webp)
 
 **parseHTML**
 首先我们需要定义个 parseHTML 函数，在里面我们循环解析 template 字符串。
@@ -236,7 +236,7 @@ if (end) {
 const stack = [];
 let currentParent, root;
 ```
-![lerna](/learing_record/images/vue2.12.webp)
+![lerna](/images/vue2.12.webp)
 
 
 知道这个以后，我们优化一下 parseHTML ，在 startTagOpen 的 if 逻辑中加上新的处理。

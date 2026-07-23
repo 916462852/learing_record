@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="320" viewBox="0 0 980 320" role="img" aria-labelledby="title desc">
+  <title id="title">Shallow and deep copy</title>
+  <desc id="desc">A comparison showing shallow copy sharing nested references and deep copy cloning them independently.</desc>
+  <rect width="980" height="320" rx="18" fill="#fffaf6"/>
+  <g font-family="Arial, sans-serif">
+    <rect x="64" y="70" width="318" height="170" rx="16" fill="#ffffff" stroke="#f0b98a" stroke-width="2"/>
+    <rect x="598" y="70" width="318" height="170" rx="16" fill="#ffffff" stroke="#8ec5a8" stroke-width="2"/>
+    <text x="223" y="120" text-anchor="middle" font-size="28" font-weight="700" fill="#7d4e2b">Shallow Copy</text>
+    <text x="757" y="120" text-anchor="middle" font-size="28" font-weight="700" fill="#245b3f">Deep Copy</text>
+    <text x="223" y="165" text-anchor="middle" font-size="18" fill="#5f4633">top-level values are duplicated</text>
+    <text x="223" y="194" text-anchor="middle" font-size="18" fill="#5f4633">nested objects keep same reference</text>
+    <text x="757" y="165" text-anchor="middle" font-size="18" fill="#315644">top-level values are duplicated</text>
+    <text x="757" y="194" text-anchor="middle" font-size="18" fill="#315644">nested objects are cloned too</text>
+    <line x1="223" y1="235" x2="223" y2="265" stroke="#f0b98a" stroke-width="4"/>
+    <line x1="182" y1="251" x2="264" y2="251" stroke="#f0b98a" stroke-width="4"/>
+    <line x1="757" y1="235" x2="757" y2="265" stroke="#8ec5a8" stroke-width="4"/>
+    <line x1="716" y1="251" x2="798" y2="251" stroke="#8ec5a8" stroke-width="4"/>
+    <text x="490" y="153" text-anchor="middle" font-size="24" fill="#bd6d27">reference</text>
+    <path d="M404 153 C440 153, 448 153, 476 153" fill="none" stroke="#bd6d27" stroke-width="3" marker-end="url(#arrow)"/>
+  </g>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#bd6d27"/>
+    </marker>
+  </defs>
+</svg>

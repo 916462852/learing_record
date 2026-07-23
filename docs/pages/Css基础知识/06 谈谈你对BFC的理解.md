@@ -72,7 +72,7 @@ author:
 
 页面显示如下：
 
-![lerna](/learing_record/images/css07.webp)
+![lerna](/images/css07.webp)
 
 
 两个p元素之间的距离为100px，发生了```margin```重叠（塌陷），以最大的为准，如果第一个P的```margin为80```的话，两个P之间的距离还是100，以最大的为准。
@@ -103,7 +103,7 @@ author:
 ```
 这时候，边距则不会重叠：
 
-![lerna](/learing_record/images/css08.webp)
+![lerna](/images/css08.webp)
 
 **清除内部浮动**
 ```html
@@ -129,7 +129,7 @@ author:
 ```
 页面显示如下：
 
-![lerna](/learing_record/images/css09.webp)
+![lerna](/images/css09.webp)
 
 而```BFC```在计算高度时，浮动元素也会参与，所以我们可以触发```.par```元素生活才能```BFC```，则内部浮动元素计算高度时候也会计算
 ```css
@@ -139,7 +139,7 @@ author:
 ```
 实现效果如下：
 
-![lerna](/learing_record/images/css10.webp)
+![lerna](/images/css10.webp)
 
 
 自适应多栏布局
@@ -170,7 +170,7 @@ author:
 ```
 效果图如下：
 
-![lerna](/learing_record/images/css11.webp)
+![lerna](/images/css11.webp)
 
 
 前面讲到，每个元素的左外边距与包含块的左边界相接触
@@ -189,7 +189,7 @@ author:
 
 效果如下：
 
-![lerna](/learing_record/images/css12.webp)
+![lerna](/images/css12.webp)
 
 小结
 ---

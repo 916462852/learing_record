@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="340" viewBox="0 0 980 340" role="img" aria-labelledby="title desc">
+  <title id="title">CORS request flow</title>
+  <desc id="desc">Browser sends a cross-origin request, the server responds with CORS headers, and the browser decides whether JavaScript can read the response.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#2c7da0"/>
+    </marker>
+  </defs>
+  <rect width="980" height="340" rx="18" fill="#f8fcfb"/>
+  <g font-family="Arial, sans-serif">
+    <rect x="60" y="86" width="210" height="130" rx="14" fill="#ffffff" stroke="#95c9d8" stroke-width="2"/>
+    <text x="165" y="138" text-anchor="middle" font-size="28" font-weight="700" fill="#16324f">Browser</text>
+    <text x="165" y="176" text-anchor="middle" font-size="18" fill="#506779">Origin: app.example.com</text>
+
+    <rect x="710" y="86" width="210" height="130" rx="14" fill="#ffffff" stroke="#95c9d8" stroke-width="2"/>
+    <text x="815" y="138" text-anchor="middle" font-size="28" font-weight="700" fill="#16324f">API Server</text>
+    <text x="815" y="176" text-anchor="middle" font-size="18" fill="#506779">api.example.com</text>
+
+    <line x1="292" y1="126" x2="688" y2="126" stroke="#2c7da0" stroke-width="4" marker-end="url(#arrow)"/>
+    <text x="490" y="101" text-anchor="middle" font-size="20" fill="#2a6f8f">Cross-origin request</text>
+
+    <line x1="688" y1="180" x2="292" y2="180" stroke="#2c7da0" stroke-width="4" marker-end="url(#arrow)"/>
+    <text x="490" y="218" text-anchor="middle" font-size="20" fill="#2a6f8f">Access-Control-Allow-Origin</text>
+
+    <rect x="286" y="248" width="408" height="52" rx="10" fill="#e6f4f1" stroke="#83b8ad" stroke-width="1.5"/>
+    <text x="490" y="281" text-anchor="middle" font-size="19" fill="#285c54">Browser allows JavaScript to read the response</text>
+  </g>
+</svg>

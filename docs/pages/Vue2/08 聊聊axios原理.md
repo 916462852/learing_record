@@ -293,7 +293,7 @@ chains大概是['fulfilled1','reject1','fulfilled2','reject2','this.sendAjax','u
 三、源码分析
 ---------
 
-![axios](/learing_record/images/axios.webp)
+![axios](/images/axios.webp)
 
 ```axios```发送请求有很多实现的方法，实现入口文件为```axios.js ```
 ```js
@@ -637,4 +637,4 @@ if (config.cancelToken) {
 巧妙的地方在 CancelToken中 executor 函数，通过resolve函数的传递与执行，控制promise的状态
 
 
-![axios](/learing_record/images/axios2.webp)
+![axios](/images/axios2.webp)
