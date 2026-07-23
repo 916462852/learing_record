@@ -24,7 +24,27 @@ module.exports = {
     markdown: {
         lineNumbers: true,
         // toc: { includeLevel: [2, 3, 4] },
-        extractHeaders: ['h1', 'h2', 'h3', 'h4']
+        extractHeaders: ['h1', 'h2', 'h3', 'h4'],
+        extendMarkdown: (md) => {
+            const defaultImageRenderer = md.renderer.rules.image;
+
+            md.renderer.rules.image = (tokens, idx, options, env, self) => {
+                const token = tokens[idx];
+                const srcIndex = token.attrIndex('src');
+
+                if (srcIndex >= 0) {
+                    const src = token.attrs[srcIndex][1];
+
+                    if (src.startsWith('/images/')) {
+                        token.attrs[srcIndex][1] = `${base}${src.slice(1)}`;
+                    }
+                }
+
+                return defaultImageRenderer
+                    ? defaultImageRenderer(tokens, idx, options, env, self)
+                    : self.renderToken(tokens, idx, options);
+            };
+        }
     },
     // 监听文件变化并重新构建
     extraWatchFiles: [
