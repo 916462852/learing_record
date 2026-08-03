@@ -155,15 +155,45 @@ Fiber 是 React 的核心架构之一，既是一种节点数据结构，也是�
 + 工程化生态成熟
 + 状态管理、SSR、测试、跨端方案都比较完整
 
-## 二十六、React 面试最容易答错的点
+## 二十六、React Diff / 协调的核心策略是什么？
+
++ 同层比较，不跨层复用
++ 类型不同直接替换
++ 类型相同尽量复用
++ 列表节点靠稳定 `key` 识别身份
+
+## 二十七、什么是错误边界？
+
+错误边界用于捕获子组件树中的渲染错误，并展示降级 UI，避免整页白屏。常见实现依赖类组件的 `getDerivedStateFromError` 和 `componentDidCatch`。注意它捕不到事件处理和异步代码中的错误。
+
+## 二十八、Portal 和 Suspense 分别解决什么问题？
+
++ `Portal`：逻辑属于当前组件，但 DOM 需要渲染到外部节点
++ `Suspense`：异步依赖未就绪时展示 fallback，常配合 `lazy` 做懒加载
+
+## 二十九、HOC、Render Props、自定义 Hook 怎么选？
+
+早期常见 HOC 和 Render Props，现在更推荐自定义 Hook。因为自定义 Hook 不增加组件嵌套，输入输出更清晰，也更符合函数组件体系。
+
+## 三十、`forwardRef` 和 `useImperativeHandle` 有什么用？
+
+用于父组件拿到子组件的有限命令式能力，比如聚焦、校验、滚动。React 更推崇声明式，所以这类能力应少而明确地暴露。
+
+## 三十一、SSR 和 hydration 是什么？
+
+SSR 是服务端先输出 HTML；hydration 是客户端 React 接管这些 HTML，补齐事件和交互。常见于 SEO 和首屏优化场景，Next.js 是这个方向的高频框架。
+
+## 三十二、React 面试最容易答错的点
 
 + 把虚拟 DOM 说成“绝对更快”
 + 把 `useEffect` 当成类生命周期的一一映射
 + 把 Context 直接说成 Redux 替代品
 + 把 `setState` 简单回答成“异步”
 + 把并发渲染理解成多线程
++ 忽略错误边界的能力边界
++ 把 HOC 仍说成当前首选复用方案
 
-## 二十七、React 面试速记关键词
+## 三十三、React 面试速记关键词
 
 如果时间很紧，至少记住这组关键词:
 
@@ -176,7 +206,10 @@ Fiber 是 React 的核心架构之一，既是一种节点数据结构，也是�
 + Context / Redux Toolkit
 + React 18 / 自动批处理 / 并发更新
 + Fiber / render / commit / Lane
++ Diff / key / Error Boundary / Portal / Suspense
++ HOC / Render Props / 自定义 Hook
++ SSR / hydration
 
-## 二十八、一段适合 React 面试结尾的总结话术
+## 三十四、一段适合 React 面试结尾的总结话术
 
-> React 面试的主线，其实可以归纳成三层。第一层是组件、JSX、状态、通信这些基础使用；第二层是 Hooks、性能优化和 React 18 并发更新；第三层是 Fiber、调度器、更新队列和 commit 机制这些源码原理。只要能把这三层串起来，基本大多数 React 面试题都能接得住，而且回答也不会显得只是在背 API。
+> React 面试的主线，其实可以归纳成三层。第一层是组件、JSX、状态、通信这些基础使用；第二层是 Hooks、性能优化和 React 18 并发更新；第三层是 Fiber、调度器、更新队列和 commit 机制这些源码原理。此外还要补上 Diff、错误边界、Portal、Suspense，以及逻辑复用从 HOC 到自定义 Hook 的演进。只要能把这些串起来，基本大多数 React 面试题都能接得住，而且回答也不会显得只是在背 API。

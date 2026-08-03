@@ -209,6 +209,13 @@ React 的思路更像:
 + 调度、render、commit 各做什么
 + Hooks 为什么不能放在条件语句里
 
+### 7. 进阶工程题
+
++ 错误边界
++ Portal / Suspense / lazy
++ HOC、Render Props 与自定义 Hook
++ React Router
++ SSR / hydration
 ## 八、现代 React 学习顺序建议
 
 如果要建立适合面试和项目的知识体系，建议按这个顺序走:
