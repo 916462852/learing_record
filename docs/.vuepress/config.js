@@ -16,7 +16,7 @@ module.exports = {
     description: '保持热爱 真理无限 一步一个脚印', // meta 中的描述文字，用于SEO
     // 注入到当前页面的 HTML <head> 中的标签
     head: [
-        ['link', { rel: 'icon', href: `${base}images/user.avif` }], //浏览器的标签栏的网页图标
+        ['link', { rel: 'icon', href: `${base}images/blog-logo.svg` }], // 浏览器标签页图标
         ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
         // 禁用缩放
     ],
@@ -57,7 +57,7 @@ module.exports = {
         searchMaxSuggestions: 100, // 搜索结果显示最大数
         // sidebar: 'auto', // 自动生成侧边栏
         sidebarDepth: 2, // 侧边栏显示2级
-        // logo: '/images/user.jpeg',
+        logo: '/images/blog-logo.svg',
         lastUpdated: '最近更新',
         nav: [
             // 普通链接
@@ -90,8 +90,7 @@ module.exports = {
         // sidebar: 'structuring',
        
         blogger: {
-            // avatar: '/learing_record/images/user.avif',
-            avatar: `${base}images/user.avif`,
+            avatar: `${base}images/blog-logo.svg`,
             // name: `Xiang's Blog`,
             // slogan: '保持热爱 真理无限 一步一个脚印',
         },
