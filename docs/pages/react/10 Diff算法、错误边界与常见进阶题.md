@@ -202,7 +202,36 @@ const Page = lazy(() => import("./Page"))
 + React 更推崇声明式
 + 命令式暴露应尽量少而明确
 
-## 九、`PureComponent` 和 `React.memo` 有什么区别？
+## 九、`useId` 是什么？适合什么场景？
+
+`useId` 用于生成在客户端和服务端都相对稳定的唯一 id。
+
+典型场景：
+
++ 表单项和 `label` / `input` 关联
++ 无障碍属性如 `aria-describedby`
++ SSR 场景下避免客户端和服务端 id 不一致
+
+要注意：
+
++ 它不是拿来生成列表 `key` 的
++ `key` 仍然应该来自稳定业务数据
+
+## 十、`useSyncExternalStore` 是什么？
+
+这是一个偏进阶的 Hook，主要用于安全地订阅 React 外部状态源。
+
+典型场景：
+
++ 自定义状态管理库
++ 订阅浏览器或第三方 store
++ 需要和并发渲染保持一致性的外部数据读取
+
+面试里知道它的定位即可：
+
+> `useSyncExternalStore` 不是普通业务组件的高频 Hook，但它是 React 18 时代连接外部 store 的标准接口。
+
+## 十一、`PureComponent` 和 `React.memo` 有什么区别？
 
 + `PureComponent` 面向类组件
 + `React.memo` 面向函数组件
@@ -214,7 +243,7 @@ const Page = lazy(() => import("./Page"))
 
 现代项目里，函数组件场景更常聊 `React.memo`。
 
-## 十、类组件生命周期怎么映射到 Hooks？
+## 十二、类组件生命周期怎么映射到 Hooks？
 
 这题现在还是会被问到，尤其是老项目迁移场景。
 
@@ -230,7 +259,7 @@ const Page = lazy(() => import("./Page"))
 
 > 不要把 Hooks 理解成生命周期的一一平替，而要按“状态 + 副作用依赖”来组织。
 
-## 十一、React Router 面试常考什么？
+## 十三、React Router 面试常考什么？
 
 常见点：
 
@@ -245,7 +274,7 @@ const Page = lazy(() => import("./Page"))
 
 > React 本身不管路由，路由能力通常由 `React Router` 等库提供；面试里重点看你是否理解页面切换、参数传递和权限拦截。
 
-## 十二、SSR / 同构 / hydration 怎么答？
+## 十四、SSR / 同构 / hydration 怎么答？
 
 ### SSR
 
@@ -267,7 +296,7 @@ const Page = lazy(() => import("./Page"))
 + 为什么 hydration 失败会有告警
 + Next.js 这类框架解决了什么
 
-## 十三、React Server Components 需要知道到什么程度？
+## 十五、React Server Components 需要知道到什么程度？
 
 中高级面试可能会问到，尤其是 Next.js 方向。
 
@@ -280,7 +309,7 @@ const Page = lazy(() => import("./Page"))
 
 不要求把细节讲到源码级，但要知道它和传统 CSR / SSR 不是一回事。
 
-## 十四、不可变数据为什么在 React 里很重要？
+## 十六、不可变数据为什么在 React 里很重要？
 
 因为 React 很多地方依赖引用比较判断是否变化。
 
@@ -294,10 +323,10 @@ const Page = lazy(() => import("./Page"))
 + 创建新对象 / 新数组
 + 或使用 Immer 这类不可变更新方案
 
-## 十五、这段进阶题怎么收口？
+## 十七、这段进阶题怎么收口？
 
 如果面试官问“React 除了 Hooks 和 Fiber，你还了解哪些？”
 
 可以这样答：
 
-> 我还会关注 Diff 与协调策略、错误边界、Portal、Suspense 懒加载，以及逻辑复用从 HOC / Render Props 到自定义 Hook 的演进。工程上也会涉及 React Router、SSR / hydration，以及不可变更新对性能优化的影响。这些点合在一起，才比较完整。
+> 我还会关注 Diff 与协调策略、错误边界、Portal、Suspense 懒加载，以及逻辑复用从 HOC / Render Props 到自定义 Hook 的演进。再往新一点的 React 18 方向，还包括 `useId`、`useSyncExternalStore` 这类 Hook 的定位。工程上也会涉及 React Router、SSR / hydration，以及不可变更新对性能优化的影响。这些点合在一起，才比较完整。

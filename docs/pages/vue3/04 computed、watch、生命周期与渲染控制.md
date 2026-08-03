@@ -100,7 +100,29 @@ author:
 
 它们都不是“单纯根据输入算输出”，所以通常不该塞进 `computed`。
 
-## 六、Vue3 生命周期相比 Vue2 有什么变化？
+## 六、`onWatcherCleanup` 和 `onScopeDispose` 是什么？
+
+这两个点不是每场都问，但在偏新版本或偏 composable 设计的面试里会比较加分。
+
+### `onWatcherCleanup`
+
+用于在 `watch` / `watchEffect` 的下一次重新执行前，清理上一次副作用。
+
+典型场景：
+
++ 取消上一次请求
++ 清理旧定时器
++ 停止过期订阅
+
+### `onScopeDispose`
+
+用于在当前 effect scope 被销毁时统一做清理，常见于 composable 内部。
+
+一句话理解：
+
+> 一个偏“某次 watcher 重新运行前的清理”，一个偏“整个副作用作用域销毁时的清理”。
+
+## 七、Vue3 生命周期相比 Vue2 有什么变化？
 
 最常见的变化有两个:
 
@@ -109,7 +131,7 @@ author:
 
 并且在 `Composition API` 中，生命周期通常通过 `onXxx` 的形式使用。
 
-## 七、组合式 API 中常见生命周期有哪些？
+## 八、组合式 API 中常见生命周期有哪些？
 
 常用的包括:
 
@@ -129,7 +151,7 @@ author:
 
 这两个没有直接对应的组合式钩子，大多数逻辑直接写在 `setup` 顶层即可。
 
-## 八、`onMounted` 里通常做什么？
+## 九、`onMounted` 里通常做什么？
 
 常见场景:
 
@@ -142,7 +164,7 @@ author:
 
 > 不是所有请求都必须写在 `onMounted`，有些数据请求也可以在更高层的异步流程里处理。
 
-## 九、`nextTick` 是什么？什么时候用？
+## 十、`nextTick` 是什么？什么时候用？
 
 Vue 更新 DOM 是异步批处理的，所以修改状态后，DOM 不一定会立刻同步完成。
 
@@ -156,7 +178,7 @@ Vue 更新 DOM 是异步批处理的，所以修改状态后，DOM 不一定会�
 + 聚焦最新渲染出来的元素
 + 列表渲染完成后执行滚动
 
-## 十、`v-if` 和 `v-show` 的区别是什么？
+## 十一、`v-if` 和 `v-show` 的区别是什么？
 
 ### `v-if`
 
@@ -173,7 +195,7 @@ Vue 更新 DOM 是异步批处理的，所以修改状态后，DOM 不一定会�
 + 频繁切换用 `v-show`
 + 不频繁切换或初始可能不显示用 `v-if`
 
-## 十一、为什么 `v-for` 一定要配合稳定的 `key`？
+## 十二、为什么 `v-for` 一定要配合稳定的 `key`？
 
 `key` 的本质是节点身份标识。
 
@@ -187,7 +209,7 @@ Vue 更新 DOM 是异步批处理的，所以修改状态后，DOM 不一定会�
 
 > 不推荐在可增删、可排序的列表里使用数组下标作为 `key`。
 
-## 十二、`KeepAlive` 是什么？它的生命周期有什么不同？
+## 十三、`KeepAlive` 是什么？它的生命周期有什么不同？
 
 `KeepAlive` 用于缓存动态组件实例，避免频繁卸载和重建。
 
@@ -201,7 +223,7 @@ Vue 更新 DOM 是异步批处理的，所以修改状态后，DOM 不一定会�
 + 被缓存组件切走时不一定真正卸载
 + 一些清理逻辑要放在 `deactivated` 中考虑
 
-## 十三、`Teleport` 和 `Suspense` 怎么理解？
+## 十四、`Teleport` 和 `Suspense` 怎么理解？
 
 ### `Teleport`
 
@@ -219,13 +241,14 @@ Vue 更新 DOM 是异步批处理的，所以修改状态后，DOM 不一定会�
 
 它在真实业务里的使用频率通常没有 `Teleport` 那么高，但面试里要知道它是 Vue3 的异步协调能力之一。
 
-## 十四、这类题常见易错点
+## 十五、这类题常见易错点
 
 + 把 `computed` 和 `watch` 混着讲
 + 把 `watchEffect` 理解成“更高级的 watch”
 + 忽略 `nextTick` 的真正用途
 + 忘记 `KeepAlive` 缓存组件的生命周期差异
++ 分不清 watcher 级清理和作用域级清理
 
-## 十五、一段适合面试现场的总结话术
+## 十六、一段适合面试现场的总结话术
 
-> Vue3 里和“副作用、渲染时机、生命周期”相关的题，核心要先把职责分清。`computed` 用于派生值，`watch` 用于副作用，`watchEffect` 用于自动收集依赖的副作用。生命周期方面，组合式 API 通过 `onMounted`、`onUnmounted` 等钩子组织逻辑，而 `beforeCreate`、`created` 这类能力大多被 `setup` 顶层取代。再往下延伸，`nextTick`、`KeepAlive`、`Teleport`、`Suspense` 本质上也都和 Vue3 的渲染时机与视图协调能力有关。
+> Vue3 里和“副作用、渲染时机、生命周期”相关的题，核心要先把职责分清。`computed` 用于派生值，`watch` 用于副作用，`watchEffect` 用于自动收集依赖的副作用。生命周期方面，组合式 API 通过 `onMounted`、`onUnmounted` 等钩子组织逻辑，而 `beforeCreate`、`created` 这类能力大多被 `setup` 顶层取代。再往下延伸，`nextTick`、`KeepAlive`、`Teleport`、`Suspense`，以及 `onWatcherCleanup`、`onScopeDispose` 这种清理机制，本质上也都和 Vue3 的渲染时机与副作用管理能力有关。

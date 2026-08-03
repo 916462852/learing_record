@@ -181,13 +181,42 @@ Vue 里更典型的方式是:
 
 这比过去基于实例的 `$attrs`、`$slots` 更显式，也更符合组合式 API 风格。
 
-## 十四、Vue3 组件基础中常见高频易错点
+## 十四、`defineSlots`、`defineOptions`、`withDefaults` 分别是做什么的？
+
+这些都是现代 Vue3 项目里比较常见的补充能力。
+
+### `defineSlots`
+
+主要用于给插槽做类型声明，尤其在 TypeScript 场景下很有价值。
+
+### `defineOptions`
+
+用于在 `script setup` 中声明组件选项，例如组件名等元信息。
+
+### `withDefaults`
+
+常用于给基于类型声明的 `defineProps` 提供默认值。
+
+面试里可以概括为：
+
+> 这几个宏本质上是在补齐 `script setup` 的组件契约和类型体验。
+
+## 十五、`useTemplateRef` 怎么理解？
+
+在较新的 Vue 版本里，`useTemplateRef` 可以让模板 `ref` 的使用更直观，尤其在 TypeScript 场景下更友好。
+
+如果面试官追问“Vue3 获取 DOM 的推荐方式”，可以补一句：
+
++ 核心仍然是模板 `ref`
++ 只是新版本对模板 `ref` 的组合式写法又做了更现代的封装
+
+## 十六、Vue3 组件基础中常见高频易错点
 
 + 不要在 `setup` 里期待 `this`
 + 不要把 `props` 解构问题讲成绝对结论
 + 不要把 `defineExpose` 当成默认必开
 + 不要把 `getCurrentInstance()` 当成日常方案
 
-## 十五、一段适合面试现场的总结话术
+## 十七、一段适合面试现场的总结话术
 
 > Vue3 组件层最核心的变化，是从过去围绕组件实例的 `Options API`，转向围绕响应式状态和函数组合的 `Composition API`。其中 `script setup` 是当前主流写法，本质是 `setup()` 的语法糖。开发中常见的 `defineProps`、`defineEmits`、`defineExpose`、`defineModel` 都是为了让组件的输入、输出和暴露能力更清晰。面试里除了会用，更重要的是知道它们背后对应的是 Vue3 从“实例式”到“组合式”的思路变化。
